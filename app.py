@@ -72,3 +72,5 @@ print(accuracyRFC)
 print(f1)
 print(precision)
 print(recall)
+
+dt_classifier = DecisionTreeClassifier(criterion="entropy", max_depth=4)
