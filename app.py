@@ -115,3 +115,9 @@ accuracy_scores =[accuracyRFC, accuracyDT, accuracyNB]
 training_times = [training_timeRFC, training_timeDT, training_timeNB]
 
 algorithm_names = ["Random Forest", "Decision Tree", "Gaussian Naive Bayes"]
+
+plt.bar(algorithm_names, accuracy_scores)
+plt.xlabel('Algorithms')
+plt.ylabel('Accuracy')
+plt.title('Accuracy Comparison of Algorithm')
+plt.show()
