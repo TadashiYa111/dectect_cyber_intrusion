@@ -56,3 +56,8 @@ Y = normalized_data['LABEL']
 X_train, X_test, y_train, y_test = train_test_split(X, Y, test_size=0.3, random_state=42)
 
 rf_classifier = RandomForestClassifier(n_estimators=30)
+
+start_time = time.time()
+rf_classifier.fit(X_train, y_train)
+end_time = time.time()
+training_timeRFC = end_time - start_time
