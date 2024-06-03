@@ -80,3 +80,5 @@ dt_classifier.fit(X_train, y_train)
 end_time = time.time()
 training_timeDT = end_time - start_time
 print(training_timeDT)
+
+y_pred = dt_classifier.predict(X_test)
