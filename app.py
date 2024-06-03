@@ -100,3 +100,5 @@ nb_classifier.fit(X_train, y_train)
 end_time = time.time()
 training_timeNB = end_time - start_time
 print(training_timeNB)
+
+y_pred = nb_classifier.predict(X_test)
