@@ -92,3 +92,5 @@ print("Accuracy:", accuracyDT)
 print("F1 Score:", f1)
 print("Precision:", precision)
 print("Recall", recall)
+
+nb_classifier = GaussianNB()
