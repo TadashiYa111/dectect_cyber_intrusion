@@ -54,3 +54,5 @@ X = normalized_data.drop(columns=['LABEL'], axis=1)
 Y = normalized_data['LABEL']
 
 X_train, X_test, y_train, y_test = train_test_split(X, Y, test_size=0.3, random_state=42)
+
+rf_classifier = RandomForestClassifier(n_estimators=30)
