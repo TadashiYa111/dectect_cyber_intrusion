@@ -49,3 +49,6 @@ normalized_data[non_numerical_columns] = normalized_data[non_numerical_columns].
 scaler = StandardScaler()
 normalized_data[numerical_columns] = scaler.fit_transform(normalized_data[numerical_columns])
 print(normalized_data.head())
+
+X = normalized_data.drop(columns=['LABEL'], axis=1)
+Y = normalized_data['LABEL']
