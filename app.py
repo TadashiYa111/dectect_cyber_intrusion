@@ -45,3 +45,7 @@ non_numerical_columns = normalized_data.select_dtypes(exclude=['float64', 'int64
 
 label_encoder = LabelEncoder()
 normalized_data[non_numerical_columns] = normalized_data[non_numerical_columns].apply(label_encoder.fit_transform)
+
+scaler = StandardScaler()
+normalized_data[numerical_columns] = scaler.fit_transform(normalized_data[numerical_columns])
+print(normalized_data.head())
