@@ -1,3 +1,4 @@
+import sklearn
 from sklearn.metrics import accuracy_score,f1_score,recall_score,precision_score
 from sklearn.model_selection import train_test_split
 import time
@@ -41,3 +42,6 @@ normalized_data = data_frame.copy()
 numerical_columns = normalized_data.select_dtypes(include=['float64', 'int64']).columns
 
 non_numerical_columns = normalized_data.select_dtypes(exclude=['float64', 'int64']).columns
+
+label_encoder = LabelEncoder()
+normalized_data[non_numerical_columns] = normalized_data[non_numerical_columns].apply(label_encoder.fit_transform)
