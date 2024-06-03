@@ -61,3 +61,5 @@ start_time = time.time()
 rf_classifier.fit(X_train, y_train)
 end_time = time.time()
 training_timeRFC = end_time - start_time
+
+y_pred = rf_classifier.predict(X_test)
