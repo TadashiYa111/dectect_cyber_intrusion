@@ -74,3 +74,9 @@ print(precision)
 print(recall)
 
 dt_classifier = DecisionTreeClassifier(criterion="entropy", max_depth=4)
+
+start_time = time.time()
+dt_classifier.fit(X_train, y_train)
+end_time = time.time()
+training_timeDT = end_time - start_time
+print(training_timeDT)
