@@ -110,3 +110,6 @@ recall = recall_score(y_test, y_pred, average="weighted")
 print("Accuracy:", accuracyNB)
 print("F1 Score:", f1_score)
 print("Recall Score:", recall)
+
+accuracy_scores =[accuracyRFC, accuracyDT, accuracyNB]
+training_times = [training_timeRFC, training_timeDT, training_timeNB]
