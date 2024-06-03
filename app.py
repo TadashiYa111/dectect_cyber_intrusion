@@ -94,3 +94,9 @@ print("Precision:", precision)
 print("Recall", recall)
 
 nb_classifier = GaussianNB()
+
+start_time = time.time()
+nb_classifier.fit(X_train, y_train)
+end_time = time.time()
+training_timeNB = end_time - start_time
+print(training_timeNB)
