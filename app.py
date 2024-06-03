@@ -82,3 +82,13 @@ training_timeDT = end_time - start_time
 print(training_timeDT)
 
 y_pred = dt_classifier.predict(X_test)
+
+accuracyDT = accuracy_score(y_test, y_pred)
+f1 = f1_score(y_test, y_pred, "weighted")
+precision = precision_score(y_test, y_pred, "weighted")
+recall = recall_score(y_test, y_pred, "weighted")
+
+print("Accuracy:", accuracyDT)
+print("F1 Score:", f1)
+print("Precision:", precision)
+print("Recall", recall)
