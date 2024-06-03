@@ -102,3 +102,11 @@ training_timeNB = end_time - start_time
 print(training_timeNB)
 
 y_pred = nb_classifier.predict(X_test)
+
+accuracyNB = accuracy_score(y_test, y_pred)
+f1 = f1_score(y_test, y_pred, average="weighted")
+precision = precision_score(y_test, y_pred, average="weighted")
+recall = recall_score(y_test, y_pred, average="weighted")
+print("Accuracy:", accuracyNB)
+print("F1 Score:", f1_score)
+print("Recall Score:", recall)
