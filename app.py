@@ -63,3 +63,12 @@ end_time = time.time()
 training_timeRFC = end_time - start_time
 
 y_pred = rf_classifier.predict(X_test)
+
+accuracyRFC = accuracy_score(y_test, y_pred)
+f1 = f1_score(y_test, y_pred, "weighted")
+precision = precision_score(y_test, y_pred, "weighted")
+recall = recall_score(y_test, y_pred, "weighted")
+print(accuracyRFC)
+print(f1)
+print(precision)
+print(recall)
